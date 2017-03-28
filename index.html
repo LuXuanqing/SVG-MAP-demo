@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG MAP</title>
+  <link rel="stylesheet" href="statics/map.css">
+  <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+  <nav>this is navigation</nav>
+  <div class="map-container">
+    <!-- svg map -->
+    <svg id="myMap" width="1280px" height="720px" viewBox="0 0 1280 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+        <defs>
+            <circle id="path-1" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="1.13686838e-13" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-1" fill="black"></use>
+            </mask>
+            <circle id="path-4" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="1.13686838e-13" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-4" fill="black"></use>
+            </mask>
+            <circle id="path-7" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-8">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-9" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="1.13686838e-13" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-7" fill="black"></use>
+            </mask>
+            <circle id="path-10" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-11">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="1.13686838e-13" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-10" fill="black"></use>
+            </mask>
+            <circle id="path-13" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-14">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.327445652 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-15" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="0" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-13" fill="black"></use>
+            </mask>
+            <circle id="path-16" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-17">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.327445652 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="0" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-16" fill="black"></use>
+            </mask>
+            <circle id="path-19" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-20">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.327445652 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-21" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="0" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-19" fill="black"></use>
+            </mask>
+            <circle id="path-22" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-23">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-24" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="0" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-22" fill="black"></use>
+            </mask>
+            <circle id="path-25" cx="12" cy="12" r="11"></circle>
+            <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-26">
+                <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+                <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <mask id="mask-27" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="24" height="24">
+                <rect x="0" y="0" width="24" height="24" fill="white"></rect>
+                <use xlink:href="#path-25" fill="black"></use>
+            </mask>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="tohtml">
+                <g id="areas" transform="translate(235.000000, 26.000000)">
+                    <polygon id="bg" stroke="#460707" stroke-width="2" fill="#FFFFFA" points="346.448585 681.007734 435.969591 660.664439 860.633993 461.319667 751.530876 259.482655 629.344994 316.068543 619.081765 297.681507 550.414512 331.151106 522.177118 298.594328 502.698601 283.345114 463.643979 266.472941 438.304191 261.144649 415.856003 271.49796 410.305512 259.706356 379.556359 275.363937 372.914386 262.893722 352.941924 271.748686 205.691001 0.609349252 0.462438411 86.5466329 257.573159 561.560314 296.139842 542.994618 345.852549 634.920787 336.22439 639.492399 345.724934 658.361368 335.752966 663.589069"></polygon>
+                    <polygon id="area-13" stroke="#737373" fill="#EFFBFF" points="584.650051 590.871275 860.633993 461.319667 751.530876 259.482655 629.344994 316.068543 619.081765 297.681507 571.927437 320.665337 579.371996 347.041243 524.277532 373.617724 534.216601 391.747148 544.759182 387.277395 565.829673 430.669406 675.417185 375.958424 728.308206 481.53196 614.135688 539.253162 600.500114 513.74959 555.459974 537.040289"></polygon>
+                    <polygon id="area-12" stroke="#737373" fill="#FFDEDE" points="596.493395 437.680679 662.611884 405.792907 690.687387 467.126391 627.269467 498.555383"></polygon>
+                    <polygon id="area-11" stroke="#737373" fill="#FFDEDE" points="346.448585 681.007734 435.969591 660.664439 535.897685 613.756474 505.074012 558.487391 362.513571 626.110548 339.426704 580.675447 321.147283 589.237087 345.852549 634.920787 336.22439 639.492399 345.724934 658.361368 335.752966 663.589069"></polygon>
+                    <polygon id="area-10" stroke="#737373" fill="#EFFBFF" points="505.68231 363.124646 542.27654 429.424558 498.304644 450.404746 459.295491 425.18527 427.839363 412.980116 394.495962 404.631291 372.990482 401.584131 354.083149 401.658049 329.66026 356.58603 393.244857 325.632389"></polygon>
+                    <polygon id="area-9" stroke="#737373" fill="#EFFBFF" points="552.897171 335.832315 506.107733 363.318878 422.682389 335.130878 435.696711 301.370704 427.693099 293.672201 402.270741 306.73056 385.476368 271.613908 408.371352 260.211632 414.920191 271.606831 438.579521 261.302318 463.432552 266.552084 503.011819 283.253666 522.435006 298.304671"></polygon>
+                    <polygon id="area-8" stroke="#737373" fill="#EFFBFF" points="392.246664 579.638741 420.033633 565.907988 430.809364 535.398608 455.900726 523.36984 470.695937 552.589809 525.342304 526.924099 510.564323 499.295075 490.25441 479.565255 454.623758 461.988283 358.005934 429.79702 355.949768 435.039862 341.814099 431.449228 342.622973 425.395597 336.164427 423.392079 333.985732 432.448594 304.103349 426.84487 309.779824 456.1127 332.39383 509.908074 350.520262 535.300011"></polygon>
+                    <polygon id="area-7" stroke="#737373" fill="#EFFBFF" points="328.238226 406.815551 282.569595 427.432108 226.889532 323.926401 269.851008 303.469156 279.786795 321.108072 286.669296 350.236924 287.764995 371.726831 295.201076 384.275791 309.291578 390.100415 325.766027 394.433926"></polygon>
+                    <polygon id="area-6" stroke="#737373" fill="#EFFBFF" points="321.207664 213.443509 264.255494 240.260825 214.881943 148.278645 184.797944 162.939224 155.14027 109.411715 142.71627 84.4046552 229.90717 45.5269056"></polygon>
+                    <polygon id="area-5" stroke="#737373" fill="#EFFBFF" points="66.8413585 208.789649 115.974697 185.450015 127.449747 189.933995 174.689513 168.325627 106.494932 42.249402 1.01753049 86.9928984"></polygon>
+                    <polygon id="area-4" stroke="#737373" fill="#EFFFEF" points="321.807437 589.610074 339.865936 580.387914 284.597846 480.820334 228.795409 506.887192 258.053832 561.811287 296.679525 543.340504"></polygon>
+                    <polygon id="area-3" stroke="#737373" fill="#EFFFEF" points="221.296642 494.651867 276.270245 467.830438 258.430264 430.63365 128.402154 190.417611 116.16248 185.33338 67.4991271 208.916555"></polygon>
+                    <polygon id="area-2" stroke="#737373" fill="#EFFFEF" points="264.579938 240.536136 321.450819 214.093319 353.334055 271.913611 362.845914 268.010757 382.595952 306.046787 316.660665 339.656456"></polygon>
+                    <polygon id="area-1" stroke="#737373" fill="#EFFFEF" points="169.80232 225.416538 220.79547 200.902965 256.534659 268.301031 227.020515 281.897007 231.837288 290.872684 211.23671 300.786363"></polygon>
+                </g>
+                <g id="cameras" transform="translate(292.000000, 200.000000)">
+                    <g id="surveillance" transform="translate(674.179575, 99.422427)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#69A7E9" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-3)" stroke-width="2" xlink:href="#path-1"></use>
+                        </g>
+                        <path d="M14.6719927,13.912244 C14.5758353,13.7289887 14.5214352,13.5203849 14.5214352,13.2990753 C14.5214352,13.2930644 14.5214754,13.2870628 14.5215554,13.2810708 L10.4211916,13.2810708 C9.86606428,13.2810708 9.41604467,12.8414332 9.41604467,12.2831733 L9.41604467,8.90667093 C9.41604467,8.35554737 9.86005495,7.90877346 10.4211916,7.90877346 L19.7373483,7.90877346 C20.2924756,7.90877346 20.7424952,8.3484111 20.7424952,8.90667093 L20.7424952,12.2831733 C20.7424952,12.8342969 20.298485,13.2810708 19.7373483,13.2810708 L17.1643747,13.2810708 C17.1644547,13.2870628 17.1644948,13.2930644 17.1644948,13.2990753 C17.1644948,13.9819777 16.6465112,14.5438985 15.9820034,14.6133783 L14.9409331,16.9516605 L17.7455039,18.2244696 L17.2256427,19.392097 L13.0619548,17.5141699 L14.6719927,13.912244 Z M6.03094344,8.91273327 C6.02338328,8.35826158 6.39261486,8.15565814 6.85746458,8.46140245 L8.41956042,9.48883539 L8.41956042,11.8818914 L6.9574624,12.7382843 C6.47839381,13.0188885 6.08382703,12.7912833 6.07634312,12.2424034 L6.03094344,8.91273327 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd" transform="translate(13.386662, 13.650435) rotate(-24.000000) translate(-13.386662, -13.650435) "></path>
+                    </g>
+                    <g id="surveillance" transform="translate(458.289743, 377.890430)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                            <use fill="#69A7E9" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-6)" stroke-width="2" xlink:href="#path-4"></use>
+                        </g>
+                        <path d="M14.6719927,13.912244 C14.5758353,13.7289887 14.5214352,13.5203849 14.5214352,13.2990753 C14.5214352,13.2930644 14.5214754,13.2870628 14.5215554,13.2810708 L10.4211916,13.2810708 C9.86606428,13.2810708 9.41604467,12.8414332 9.41604467,12.2831733 L9.41604467,8.90667093 C9.41604467,8.35554737 9.86005495,7.90877346 10.4211916,7.90877346 L19.7373483,7.90877346 C20.2924756,7.90877346 20.7424952,8.3484111 20.7424952,8.90667093 L20.7424952,12.2831733 C20.7424952,12.8342969 20.298485,13.2810708 19.7373483,13.2810708 L17.1643747,13.2810708 C17.1644547,13.2870628 17.1644948,13.2930644 17.1644948,13.2990753 C17.1644948,13.9819777 16.6465112,14.5438985 15.9820034,14.6133783 L14.9409331,16.9516605 L17.7455039,18.2244696 L17.2256427,19.392097 L13.0619548,17.5141699 L14.6719927,13.912244 Z M6.03094344,8.91273327 C6.02338328,8.35826158 6.39261486,8.15565814 6.85746458,8.46140245 L8.41956042,9.48883539 L8.41956042,11.8818914 L6.9574624,12.7382843 C6.47839381,13.0188885 6.08382703,12.7912833 6.07634312,12.2424034 L6.03094344,8.91273327 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd" transform="translate(13.386662, 13.650435) rotate(-24.000000) translate(-13.386662, -13.650435) "></path>
+                    </g>
+                    <g id="surveillance" transform="translate(137.000000, 130.000000)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                            <use fill="#69A7E9" fill-rule="evenodd" xlink:href="#path-7"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-9)" stroke-width="2" xlink:href="#path-7"></use>
+                        </g>
+                        <path d="M14.6719927,13.912244 C14.5758353,13.7289887 14.5214352,13.5203849 14.5214352,13.2990753 C14.5214352,13.2930644 14.5214754,13.2870628 14.5215554,13.2810708 L10.4211916,13.2810708 C9.86606428,13.2810708 9.41604467,12.8414332 9.41604467,12.2831733 L9.41604467,8.90667093 C9.41604467,8.35554737 9.86005495,7.90877346 10.4211916,7.90877346 L19.7373483,7.90877346 C20.2924756,7.90877346 20.7424952,8.3484111 20.7424952,8.90667093 L20.7424952,12.2831733 C20.7424952,12.8342969 20.298485,13.2810708 19.7373483,13.2810708 L17.1643747,13.2810708 C17.1644547,13.2870628 17.1644948,13.2930644 17.1644948,13.2990753 C17.1644948,13.9819777 16.6465112,14.5438985 15.9820034,14.6133783 L14.9409331,16.9516605 L17.7455039,18.2244696 L17.2256427,19.392097 L13.0619548,17.5141699 L14.6719927,13.912244 Z M6.03094344,8.91273327 C6.02338328,8.35826158 6.39261486,8.15565814 6.85746458,8.46140245 L8.41956042,9.48883539 L8.41956042,11.8818914 L6.9574624,12.7382843 C6.47839381,13.0188885 6.08382703,12.7912833 6.07634312,12.2424034 L6.03094344,8.91273327 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd" transform="translate(13.386662, 13.650435) rotate(-24.000000) translate(-13.386662, -13.650435) "></path>
+                    </g>
+                    <g id="surveillance">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                            <use fill="#69A7E9" fill-rule="evenodd" xlink:href="#path-10"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-12)" stroke-width="2" xlink:href="#path-10"></use>
+                        </g>
+                        <path d="M14.6719927,13.912244 C14.5758353,13.7289887 14.5214352,13.5203849 14.5214352,13.2990753 C14.5214352,13.2930644 14.5214754,13.2870628 14.5215554,13.2810708 L10.4211916,13.2810708 C9.86606428,13.2810708 9.41604467,12.8414332 9.41604467,12.2831733 L9.41604467,8.90667093 C9.41604467,8.35554737 9.86005495,7.90877346 10.4211916,7.90877346 L19.7373483,7.90877346 C20.2924756,7.90877346 20.7424952,8.3484111 20.7424952,8.90667093 L20.7424952,12.2831733 C20.7424952,12.8342969 20.298485,13.2810708 19.7373483,13.2810708 L17.1643747,13.2810708 C17.1644547,13.2870628 17.1644948,13.2930644 17.1644948,13.2990753 C17.1644948,13.9819777 16.6465112,14.5438985 15.9820034,14.6133783 L14.9409331,16.9516605 L17.7455039,18.2244696 L17.2256427,19.392097 L13.0619548,17.5141699 L14.6719927,13.912244 Z M6.03094344,8.91273327 C6.02338328,8.35826158 6.39261486,8.15565814 6.85746458,8.46140245 L8.41956042,9.48883539 L8.41956042,11.8818914 L6.9574624,12.7382843 C6.47839381,13.0188885 6.08382703,12.7912833 6.07634312,12.2424034 L6.03094344,8.91273327 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd" transform="translate(13.386662, 13.650435) rotate(-24.000000) translate(-13.386662, -13.650435) "></path>
+                    </g>
+                </g>
+                <g id="poes" transform="translate(408.000000, 192.000000)">
+                    <g id="poe-5 transform="translate(201.311151, 140.689196)">
+                        <g id="Oval-2">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                            <use fill="#F1C40F" fill-rule="evenodd" xlink:href="#path-13"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-15)" stroke-width="2" xlink:href="#path-13"></use>
+                        </g>
+                        <path d="M9,14.1973068 C7.20659589,13.1598786 6,11.2208471 6,9 C6,5.6862915 8.6862915,3 12,3 C15.3137085,3 18,5.6862915 18,9 C18,11.2208471 16.7934041,13.1598786 15,14.1973068 L15,17 L9,17 L9,14.1973068 Z M9,18 L15,18 L15,19.5 C15,20.3284271 14.3349702,21 13.501424,21 L10.498576,21 C9.67093534,21 9,20.3342028 9,19.5 L9,18 Z M13.0152661,5 L9,9.71376759 L12.3776112,10.3428784 L10.5379806,14 L15,9.5 L11.6560645,8.79735585 L13.0152661,5 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd"></path>
+                    </g>
+                    <g id="poe-4" transform="translate(519.564084, 230.251101)">
+                        <g id="Oval-2">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-17)" xlink:href="#path-16"></use>
+                            <use fill="#F1C40F" fill-rule="evenodd" xlink:href="#path-16"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-18)" stroke-width="2" xlink:href="#path-16"></use>
+                        </g>
+                        <path d="M9,14.1973068 C7.20659589,13.1598786 6,11.2208471 6,9 C6,5.6862915 8.6862915,3 12,3 C15.3137085,3 18,5.6862915 18,9 C18,11.2208471 16.7934041,13.1598786 15,14.1973068 L15,17 L9,17 L9,14.1973068 Z M9,18 L15,18 L15,19.5 C15,20.3284271 14.3349702,21 13.501424,21 L10.498576,21 C9.67093534,21 9,20.3342028 9,19.5 L9,18 Z M13.0152661,5 L9,9.71376759 L12.3776112,10.3428784 L10.5379806,14 L15,9.5 L11.6560645,8.79735585 L13.0152661,5 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd"></path>
+                    </g>
+                    <g id="poe-3" transform="translate(0.593885, 0.011034)">
+                        <g id="Oval-2">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                            <use fill="#F1C40F" fill-rule="evenodd" xlink:href="#path-19"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-21)" stroke-width="2" xlink:href="#path-19"></use>
+                        </g>
+                        <path d="M9,14.1973068 C7.20659589,13.1598786 6,11.2208471 6,9 C6,5.6862915 8.6862915,3 12,3 C15.3137085,3 18,5.6862915 18,9 C18,11.2208471 16.7934041,13.1598786 15,14.1973068 L15,17 L9,17 L9,14.1973068 Z M9,18 L15,18 L15,19.5 C15,20.3284271 14.3349702,21 13.501424,21 L10.498576,21 C9.67093534,21 9,20.3342028 9,19.5 L9,18 Z M13.0152661,5 L9,9.71376759 L12.3776112,10.3428784 L10.5379806,14 L15,9.5 L11.6560645,8.79735585 L13.0152661,5 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd"></path>
+                    </g>
+                    <g id="poe-2" transform="translate(355.141565, 303.064873)">
+                        <g id="Oval-2">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-23)" xlink:href="#path-22"></use>
+                            <use fill="#666666" fill-rule="evenodd" xlink:href="#path-22"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-24)" stroke-width="2" xlink:href="#path-22"></use>
+                        </g>
+                        <path d="M9,14.1973068 C7.20659589,13.1598786 6,11.2208471 6,9 C6,5.6862915 8.6862915,3 12,3 C15.3137085,3 18,5.6862915 18,9 C18,11.2208471 16.7934041,13.1598786 15,14.1973068 L15,17 L9,17 L9,14.1973068 Z M9,18 L15,18 L15,19.5 C15,20.3284271 14.3349702,21 13.501424,21 L10.498576,21 C9.67093534,21 9,20.3342028 9,19.5 L9,18 Z M13.0152661,5 L9,9.71376759 L12.3776112,10.3428784 L10.5379806,14 L15,9.5 L11.6560645,8.79735585 L13.0152661,5 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd"></path>
+                    </g>
+                    <g id="poe-1" transform="translate(85.686488, 298.408775)">
+                        <g id="Oval-2">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-26)" xlink:href="#path-25"></use>
+                            <use fill="#666666" fill-rule="evenodd" xlink:href="#path-25"></use>
+                            <use stroke="#FFFFFF" mask="url(#mask-27)" stroke-width="2" xlink:href="#path-25"></use>
+                        </g>
+                        <path d="M9,14.1973068 C7.20659589,13.1598786 6,11.2208471 6,9 C6,5.6862915 8.6862915,3 12,3 C15.3137085,3 18,5.6862915 18,9 C18,11.2208471 16.7934041,13.1598786 15,14.1973068 L15,17 L9,17 L9,14.1973068 Z M9,18 L15,18 L15,19.5 C15,20.3284271 14.3349702,21 13.501424,21 L10.498576,21 C9.67093534,21 9,20.3342028 9,19.5 L9,18 Z M13.0152661,5 L9,9.71376759 L12.3776112,10.3428784 L10.5379806,14 L15,9.5 L11.6560645,8.79735585 L13.0152661,5 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="evenodd"></path>
+                    </g>
+                </g>
+                <g id="area-names" transform="translate(306.000000, 167.000000)" font-weight="normal" font-family="PingFangSC-Regular, PingFang SC, Hiragino Sans GB, STHeiti, Microsoft Yahei, SimHei" line-spacing="16" fill="#000000" font-size="12" fill-opacity="0.87">
+                    <text id="口腔综合科">
+                        <tspan x="288" y="369">口腔综合科</tspan>
+                    </text>
+                    <text id="牙周科">
+                        <tspan x="338" y="241">牙周科</tspan>
+                    </text>
+                    <text id="矫正科">
+                        <tspan x="387" y="193">矫正科</tspan>
+                    </text>
+                    <text id="骨科">
+                        <tspan x="587" y="223">骨科</tspan>
+                    </text>
+                    <text id="胸外科">
+                        <tspan x="688.92012" y="313.338204">胸外科</tspan>
+                    </text>
+                    <text id="挂号/缴费处">
+                        <tspan x="339.901488" y="481.300519">挂号/缴费处</tspan>
+                    </text>
+                    <text id="护士站">
+                        <tspan x="551" y="318">护士站</tspan>
+                    </text>
+                    <text id="牙体牙髓科">
+                        <tspan x="167" y="231">牙体牙髓科</tspan>
+                    </text>
+                    <text id="眼科">
+                        <tspan x="167" y="21">眼科</tspan>
+                    </text>
+                    <text id="耳鼻咽喉科">
+                        <tspan x="0" y="13">耳鼻咽喉科</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <!-- search box -->
+    <div class="card search-box">
+      <input type="text" id="search" placeholder="搜索室内区域、设备或楼层">
+      <a href="#" id="close-btn" class="icon-close"></a>
+      <a href="#" id="search" class="icon-search"></a>
+    </div>
+    <!-- scale box -->
+    <div class="scale-box card">
+      <div class="zoom zoom-in"></div>
+      <span class="divider-h"></span>
+      <div class="zoom zoom-out"></div>
+    </div>
+    <!-- floor box -->
+    <div class="floor-box card">
+      <div class="floor-nav floor-up"></div>
+      <div class="floor-list-box">
+        <ul class="floor-list">
+          <li class="floor-list-item">4F</li>
+          <li class="floor-list-item">3F</li>
+          <li class="floor-list-item floor-active">2F</li>
+          <li class="floor-list-item">1F</li>
+          <li class="floor-list-item">B1</li>
+        </ul>
+      </div>
+      <div class="floor-nav floor-down"></div>
+    </div>
+    <!-- tool box -->
+    <div class="tool-box card">
+      <ul class="tool-list">
+        <li class="tool-list-item">
+          <input type="checkbox" id="show-poes" checked>
+          <label for="show-poes">照明</label>
+        </li>
+        <li class="tool-list-item">
+          <input type="checkbox" id="show-cameras" checked>
+          <label for="show-cameras">监控</label>
+        </li>
+        <li class="tool-list-item">
+          <input type="checkbox" id="show-area-names" checked>
+          <label for="show-area-names">区域名称</label>
+        </li>
+      </ul>
+    </div>
+    <!-- panel box for lighting -->
+    <div class="panel-box panel-poe card hidepanel">
+      <div class="chart head-photo">this is a chart to illustrate some of the data below</div>
+      <h3 class="object-name">POE智能灯</h3>
+      <p class="address">3F 西大厅</p>
+      <hr>
+      <ul class="data-list">
+        <li class="data-list-item illuminance">
+          <span class="data-name">亮度</span>
+          <span class="data-value">342Lx</span>
+        </li>
+        <li class="data-list-item temperature">
+          <span class="data-name">温度</span>
+          <span class="data-value">24℃</span>
+        </li>
+        <li class="data-list-item humidity">
+          <span class="data-name">湿度</span>
+          <span class="data-value">65%RH</span>
+        </li>
+        <li class="data-list-item ir">
+          <span class="data-name">红外</span>
+          <span class="data-value"></span>
+        </li>
+      </ul>
+      <hr>
+      <ul class="control-list">
+        <li class="control-list-item">
+          <label for="is-manual">手动控制</label>
+          <input type="checkbox" id="is-manual">
+        </li>
+        <li class="control-list-item">
+          <label for="is-working">开关</label>
+          <input type="checkbox" id="is-working">
+        </li>
+        <li class="control-list-item">
+          <label for="illuminance">亮度</label>
+          <input id="illuminance" type="range"  value="30">
+        </li>
+        <li class="control-list-item">
+          <label for="color-temp">色温</label>
+          <input id="color-temp" type="range"  value="10">
+        </li>
+      </ul>
+    </div>
+    <!-- panel box for camera -->
+    <div class="panel-box panel-camera card hidepanel">
+      <div class="video head-photo">监控画面</div>
+      <h3 class="object-name">监控摄像头</h3>
+      <p class="address">3F 耳鼻咽喉科候诊大厅</span></p>
+    </div>
+    <!-- panel for area -->
+    <div class="panel-box panel-area card hidepanel">
+      <div class="head-photo area-photo">该区域的照片</div>
+      <h3 class="object-name">口腔综合科</h3>
+      <p class="address">3F</p>
+      <hr>
+      <ul class="control-list">
+        <li class="control-list-item">
+          <label for="is-manual">手动控制</label>
+          <input type="checkbox" id="is-manual">
+        </li>
+        <li class="control-list-item">
+          <label for="loop-1">回路1</label>
+          <input type="checkbox" id="is-working">
+        </li>
+        <li class="control-list-item">
+          <label for="loop-2">回路2</label>
+          <input type="checkbox" id="is-working">
+        </li>
+        <li class="control-list-item">
+          <label for="loop-3">回路3</label>
+          <input type="checkbox" id="is-working">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="statics/map.js" charset="utf-8"></script>
+</body>
+</html>
